@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Create / Edit";
+    //Jak obsluzyc edytowanie???
+    //.gitignore???
+    //jak poprawic blad przy konfiguracji bazy IExpenseService?
+    //Co tutaj wstawić Expense, czy Dto???
+    //FluentValidation oraz GroupingConfiguration
+}
+
+@model ExpenseTracker.Dtos.CreateExpenseDto
+
+<div class="text-center">
+    <h1 class="display-4">Dodaj lub edytuj wydatek</h1>
+</div>
+
+
+<form asp-action="CreateEditExpenseForm" asp-controller="Home">
+
+    <label class="mt-4">Kwota zł</label>
+    <input class="form-control" type="number" placeholder="0" asp-for="Value" step="0.01"/>
+
+    <label class="mt-4">Opis</label>
+    <input class="form-control" type="text" placeholder="Dodaj opis" asp-for="Description"/>
+
+    <button class="btn btn-primary mt-4" type="submit">Ok</button>
+</form>
